@@ -10,7 +10,7 @@ const doc = {
     process.env.NODE_ENV === "production"
       ? "event-management-system-uipb.onrender.com"
       : "localhost:3000", // Change this based on your environment
-  schemes: process.env.NODE_ENV === "production" ? ["https"] : ["http"],
+  schemes: ["https"],
 };
 
 const outputFile = "./swagger-output.json";
