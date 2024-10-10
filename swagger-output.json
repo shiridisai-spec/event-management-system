@@ -7,7 +7,7 @@
   },
   "host": "event-management-system-uipb.onrender.com",
   "basePath": "/api/v1",
-  "schemes": ["http"],
+  "schemes": ["https"],
   "securityDefinitions": {
     "Bearer": {
       "type": "apiKey",
