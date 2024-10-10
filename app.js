@@ -40,10 +40,7 @@ app.use(helmet());
 
 app.use(
   cors({
-    origin:
-      process.env.NODE_ENV === "production"
-        ? "https://yourproductionurl.com"
-        : "*", // Allow all origins (for testing purposes)
+    origin: "*", // Allow all origins (for testing purposes)
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allow necessary HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allow necessary headers
   })
