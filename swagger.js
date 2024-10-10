@@ -21,7 +21,7 @@ const endpointsFiles = [
 ]; // Add all your route files here
 
 // Generate Swagger output
-swaggerAutogen(outputFile, endpointsFiles, swaggerDefinition)
+swaggerAutogen(outputFile, endpointsFiles, doc)
   .then(() => {
     require("./app"); // Adjust the path to your main server file
   })
