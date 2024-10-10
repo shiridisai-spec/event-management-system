@@ -3,6 +3,7 @@ require("express-async-errors");
 const express = require("express");
 const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("./swagger-output.json"); // Generated Swagger file
+// const swaggerConfig = require("./swaggerConfig"); // Import your Swagger configuration
 const app = express();
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
@@ -39,7 +40,10 @@ app.use(helmet());
 
 app.use(
   cors({
-    origin: "*", // Allow all origins (for testing purposes)
+    origin:
+      process.env.NODE_ENV === "production"
+        ? "https://yourproductionurl.com"
+        : "*", // Allow all origins (for testing purposes)
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allow necessary HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allow necessary headers
   })

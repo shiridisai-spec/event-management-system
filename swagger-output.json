@@ -5,7 +5,7 @@
     "description": "API documentation for the Event Management System",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "event-management-system-uipb.onrender.com",
   "basePath": "/api/v1",
   "schemes": ["http"],
   "securityDefinitions": {
