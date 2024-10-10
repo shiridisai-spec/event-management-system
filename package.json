@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "migrate": "npx sequelize-cli db:migrate"
   },
   "author": "",
   "license": "ISC",
@@ -22,7 +23,9 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.0",
     "pg": "^8.13.0",
+    "pg-hstore": "^2.3.4",
     "rate-limiter": "^0.2.0",
+    "sequelize": "^6.37.4",
     "swagger-autogen": "^2.23.7",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
@@ -30,6 +33,7 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "sequelize-cli": "^6.6.2"
   }
 }
